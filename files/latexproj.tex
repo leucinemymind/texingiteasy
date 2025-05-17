@@ -40,9 +40,9 @@
 \newcommand{\define}[1]{\textcolor{blue}{\underline{#1}}} % define words
 \newcommand{\cmd}[1]{$\backslash$\texttt{#1}} %write command
 \newcommand{\emphasise}[1]{\textcolor{red}{\textbf{\textit{\underline{#1}}}}} % example new command
-\newcommand{\mathR}{\left(0.0821 \: \frac{\mathrm{L} \cdot \mathrm{mol}}{\mathrm{atm} \cdot \mathrm{K}}
+\newcommand{\mathR}{\left(0.0821 \: \frac{\mathrm{L} \cdot \mathrm{atm}}{\mathrm{mol} \cdot \mathrm{K}}
 \right)} % more examples
-\newcommand{\textR}{\(\displaystyle 0.0821 \: \frac{\mathrm{L} \cdot \mathrm{mol}}{\mathrm{atm} \cdot \mathrm{K}} \)} % even more examples
+\newcommand{\textR}{\(\displaystyle 0.0821 \: \frac{\mathrm{L} \cdot \mathrm{atm}}{\mathrm{mol} \cdot \mathrm{K}} \)} % even more examples
 
 % tad
 \title{\TeX ing it Easy}
@@ -881,12 +881,12 @@ Nice! We've done it! We've defined a command that takes one argument, and you ca
 Let's say you're in chemistry class and you want to typeset the ideal gas constant, $R$. You'd type:
 
 \begin{minted}[bgcolor=gray!5]{latex}
-\[\left(0.0821 \: \frac{\mathrm{L} \cdot \mathrm{mol}}{\mathrm{atm} \cdot
+\[\left(0.0821 \: \frac{\mathrm{L} \cdot \mathrm{atm}}{\mathrm{mol} \cdot
 \mathrm{K}}\right)\]
 \end{minted}
 Which comes out to be:
 
-\[0.0821 \: \frac{\mathrm{L} \cdot \mathrm{mol}}{\mathrm{atm} \cdot \mathrm{K}}\]
+\[0.0821 \: \frac{\mathrm{L} \cdot \mathrm{atm}}{\mathrm{mol} \cdot \mathrm{K}}\]
 
 and that looks fine. But you probably don't want to type that out every single time. Here, we'll omit the optional argument and go straight into defining our command after naming it.
 
@@ -896,10 +896,10 @@ and that looks fine. But you probably don't want to type that out every single t
 % You can also wrap your code in \ensuremath for this, but since this 
 % code is nice and functional it's probably not a good idea to risk 
 % breaking it!
-\newcommand{\mathR}{\left(0.0821 \: \frac{\mathrm{L} \cdot \mathrm{mol}}
-{\mathrm{atm} \cdot \mathrm{K}} \right)}
+\newcommand{\mathR}{\left(0.0821 \: \frac{\mathrm{L} \cdot \mathrm{atm}}
+{\mathrm{mol} \cdot \mathrm{K}} \right)}
 \newcommand{\textR}{\(\displaystyle 0.0821 \: \frac{\mathrm{L} \cdot
-\mathrm{mol}}{\mathrm{atm} \cdot \mathrm{K}} \)}
+\mathrm{atm}}{\mathrm{mol} \cdot \mathrm{K}} \)}
 
 \begin{document}
 
@@ -911,7 +911,7 @@ $$n = 0.041 \: \mathrm{mol}$$
 Now compare that to this:
 
 $$(0.986 \: \mathrm{atm})(1 \: \mathrm{L}) = \left(0.0821 \: \frac{
-\mathrm{L} \cdot \mathrm{mol}}{\mathrm{atm} \cdot \mathrm{K}} \right) 
+\mathrm{L} \cdot \mathrm{atm}}{\mathrm{mol} \cdot \mathrm{K}} \right) 
 (293\mathrm{K})(n)$$
 $$n = 0.041 \: \mathrm{mol}$$
 
@@ -927,7 +927,7 @@ $$n = 0.041 \: \mathrm{mol}$$
 Now compare that to this:
 
 $$(0.986 \: \mathrm{atm})(1 \: \mathrm{L}) = \left(0.0821 \: \frac{
-\mathrm{L} \cdot \mathrm{mol}}{\mathrm{atm} \cdot \mathrm{K}} \right) 
+\mathrm{L} \cdot \mathrm{atm}}{\mathrm{mol} \cdot \mathrm{K}} \right) 
 (293\mathrm{K})(n)$$
 $$n = 0.041 \: \mathrm{mol}$$ % OK WAIT THIS ACTUALLY WORKED!??!?!?! IM JUMPING FOR JOYYY
 
