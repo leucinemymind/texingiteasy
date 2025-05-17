@@ -11,10 +11,10 @@ A little over a year ago, I read a book called ``General Relativity For Babies,'
 
 Writers of documentation generally assume that the reader is already familiar with general computing or programming concepts, and that they are only new to that particular language or tool. This was not brought to my attention before my decision to learn JavaScript, and that led to my reading documentation before reading beginner tutorials. Truthfully, they kind of look like gibberish to someone who's not experienced. As a sixth grader who had little more experience than a few coding camps, I was the epitome of ``someone who's not experienced.''
 
-But it's amazing when you do find that one tutorial that truly helps you comprehend the language. Maybe this will be that one tutorial; maybe it won't. There's no correct answer! I will not take it personally if you decide that it is not helpful. 
+But it's amazing when you do find that one tutorial that truly helps you comprehend the language. Maybe this will be that one tutorial; maybe it won't. There's no correct answer! I will not take it personally if you decide that it is not helpful, but if you decide that it is, that's wonderful - best of luck on your journey!
 
 ## Feedback
-I gratefully welcome all sorts of feedback from everyone, no matter your level of expertise! However, GitHub can be a tricky site to work with sometimes, so here's a short and sweet guide that may compete with Sabrina Carpenter's brilliant album. If you already know how to do PRs and issues, feel free to disregard.
+I gratefully welcome all sorts of feedback from everyone, no matter your level of expertise! However, GitHub can be a tricky site to work with sometimes, so here's a short and sweet guide that is so short and sweet that it may compete with Sabrina Carpenter's brilliant album. If you already know how to do PRs and issues, feel free to disregard.
 
 If you have a general suggestion, question, comment, etc., open an issue. There's a button that looks like a little target on the top. So when you open one, you can say something like
 
