@@ -32,3 +32,5 @@ Have lots of fun! You got this :)
 Love,
 
 Your non-denominational sister in TeX
+
+P.S. The pdf seems to cut off at page 25 and stops loading, so you're welcome to clone or contact me to send you the complete version.
