@@ -1,0 +1,210 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cheatsheet
+% LaTeX Template
+% Version 1.0 (12/12/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Michael Müller (https://github.com/cmichi/latex-template-collection) with
+% extensive modifications by Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{scrartcl} % 11pt font size
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\usepackage[margin=0pt, landscape]{geometry} % Page margins and orientation
+
+\usepackage[version=4]{mhchem}
+
+\usepackage{graphicx} % Required for including images
+
+\usepackage{color} % Required for color customization
+\definecolor{mygray}{gray}{.75} % Custom color
+
+\usepackage{url} % Required for the \url command to easily display URLs
+
+\usepackage[ % This block contains information used to annotate the PDF
+colorlinks=false, 
+pdftitle={Cheatsheet}, 
+pdfauthor={John Smith}, 
+pdfsubject={Compilation of useful shortcuts}, 
+pdfkeywords={Random Software, Cheatsheet}
+]{hyperref}
+
+\setlength{\unitlength}{1mm} % Set the length that numerical units are measured in
+\setlength{\parindent}{0pt} % Stop paragraph indentation
+
+\newcommand{\command}[2]{#1~\hfill{}~#2\\} % Custom command for adding a shorcut
+
+\newcommand{\sectiontitle}[1]{\paragraph{#1} \ \\} % Custom command for subsection titles
+
+\newcommand {\latexcmd}[2]{\texttt{\textbackslash #1\{#2\}}} % commands in LaTex
+
+\newcommand{\environment}[1]{\latexcmd{begin}{#1} \dots \latexcmd{end}{#1}} % environments
+
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{picture}(297,210) % Create a container for the page content
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION 
+%----------------------------------------------------------------------------------------
+
+\put(10,200){ % Position on the page to put the title
+\begin{minipage}[t]{210mm} % The size and alignment of the title
+\section*{List of useful LaTeX commands} % Title
+\end{minipage}
+}
+
+%----------------------------------------------------------------------------------------
+%	FIRST COLUMN SPECIFICATION
+%----------------------------------------------------------------------------------------
+
+\put(5,180){ % Divide the page
+\begin{minipage}[t]{90mm} % Create a box to house text
+
+%----------------------------------------------------------------------------------------
+%	HEADING ONE
+%----------------------------------------------------------------------------------------
+
+\sectiontitle{Preamble essentials}
+
+\command{\latexcmd{documentclass}{<type>}}{Overall layout}
+\command{\latexcmd{usepackage}{<pkg>}}{Loads a package}
+\command{\latexcmd{title}{your-title}}{Title}
+\command{\latexcmd{author}{your-name}}{Author}
+\command{\latexcmd{date}{2025-02-31}}{Date}
+
+%----------------------------------------------------------------------------------------
+%	HEADING TWO
+%----------------------------------------------------------------------------------------				
+			
+\sectiontitle{Sectioning}
+			
+\command{\latexcmd{section}{Section 1}}{Numbered section}
+\command{\latexcmd{section*}{Section}}{Unnumbered section\footnote{This carries over to subsections and subsubsections as well.}}
+\command{\latexcmd{subsection}{Subsection 1.1}}{Subsection}
+\command{\latexcmd{subsubsection}{Subsubsection 1.1.1}}{Subsubsection}
+\command{\latexcmd{paragraph}{Paragraph}}{Paragraph}
+\command{\latexcmd{subparagraph}{Subparagraph}}{Subparagraph}
+
+%----------------------------------------------------------------------------------------
+%	HEADING THREE
+%----------------------------------------------------------------------------------------	
+
+\sectiontitle{Markup}
+
+\command{\latexcmd{textbf}{Bold}}{\textbf{Bold}}
+\command{\latexcmd{textit}{Italics}}{\textit{Italics}}
+\command{\latexcmd{textsl}{Slanted}}{\textsl{Slanted}}
+\command{\latexcmd{textsc}{Small caps}}{\textsc{Small caps}}
+\command{\latexcmd{underline}{Underline}}{\underline{Underline}}
+
+\sectiontitle{Lists and floats}
+
+\command{\environment{itemize}}{Bulleted list}
+\command{\environment{enumerate}}{Numbered list}\
+\command{\environment{description}}{Description list}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % End the first column of text
+} % End the first division of the page
+
+%----------------------------------------------------------------------------------------
+%	SECOND COLUMN SPECIFICATION 
+%----------------------------------------------------------------------------------------
+
+\put(100,180){ % Divide the page
+\begin{minipage}[t]{95mm} % Create a box to house text
+
+%----------------------------------------------------------------------------------------
+%	HEADING FOUR
+%----------------------------------------------------------------------------------------
+\command{\texttt{\textbackslash item}}{List item}
+\command{\environment{figure}}{\texttt{figure} environment}
+\command{\latexcmd{includegraphics}{<path>}}{Adds a picture}
+\command{\latexcmd{caption}{Caption}}{Caption}
+\command{\environment{table}}{Tabular container}
+\command{\environment{tabular}}{Creates a table}
+\command{\latexcmd{label}{<label>}}{Creates a label}
+\command{\latexcmd{ref}{<label>}}{References a fig/tab/eq}
+%----------------------------------------------------------------------------------------
+%	HEADING FIVE
+%----------------------------------------------------------------------------------------				
+\sectiontitle{Math} % Heading five
+
+\command{\latexcmd{usepackage}{amsmath}}{Loads \texttt{amsmath} package}
+\command{\texttt{\$\dots\$} or \texttt{\textbackslash(\dots \textbackslash)}}{Inline math mode}
+\command{\texttt{\$\$\dots\$\$} or \texttt{\textbackslash[\dots \textbackslash ]}}{Display math mode}
+\command{\environment{equation}}{\texttt{equation} environment}
+\command{\environment{gather}}{\texttt{gather} environment}
+\command{\environment{align}}{\texttt{align} environment}
+
+\sectiontitle{Chemistry}
+
+\command{\latexcmd{usepackage}{mhchem}}{Loads \texttt{mhchem} package}
+\command{\latexcmd{ce}{C6H12O6}}{\ce{C6H12O6}}
+\command{\texttt{\$\textbackslash to\$}}{$\to$}
+\command{\texttt{\$\textbackslash rightleftharpoons\$}}{$\rightleftharpoons$}
+
+\sectiontitle{R integration (knitr/Sweave)}
+\command{\texttt{\textless{}\textless{}options\textgreater{}\textgreater{}== ... @}}{R code block}
+\command{\texttt{echo = TRUE/FALSE}}{Show R code in the document?}
+\command{\texttt{eval = TRUE/FALSE}}{Evaluate the code?}
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % End the second column of text
+} % End the second division of the page
+
+%----------------------------------------------------------------------------------------
+%	THIRD COLUMN SPECIFICATION 
+%----------------------------------------------------------------------------------------
+
+\put(200,180){ % Divide the page
+\begin{minipage}[t]{90mm} % Create a box to house tex
+
+\command{\texttt{include = TRUE/FALSE}}{Show code and output?}
+\command{\texttt{message = TRUE/FALSE}}{Show messages?}
+\command{\texttt{warning = TRUE/FALSE}}{Show warnings?}
+
+%----------------------------------------------------------------------------------------
+%	FOOTNOTE
+%----------------------------------------------------------------------------------------
+
+\vspace{\baselineskip}
+\linethickness{0.5mm} % Thickness of the footer line
+{\color{mygray}\line(1,0){30}} % Print the line with a custom color
+
+\footnotesize{
+				
+This template is released under the MIT license.
+}
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % End the third column of text
+} % End the third division of the page
+\end{picture} % End the container for the entire page
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
