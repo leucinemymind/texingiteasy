@@ -399,7 +399,7 @@ The output is as follows:
 
 We begin by centering the table using \cmd{centering}, then opening the \texttt{tabular} environment. (\texttt{table} is a floating container that handles positioning, and \texttt{tabular} is what you use to make the table.) The \texttt{|c|c|c|} defines the structure of the table: one vertical line between each entry and two on either side. \cmd{hline} serves a similar purpose, except it creates horizontal lines instead of vertical lines.
 
-The number of rows is flexible, but the number of columns is fixed by how many \texttt{c}s you have. This particular table has three. That means there are three entries per row, and once you finish a row, you type \textbackslash \textbackslash{} to begin a new row.
+The number of rows is flexible, but the number of columns is fixed by how many \texttt{c}s (meaning text is centered, \texttt{l} (left) or \texttt{r} (right) works too) you have. This particular table has three. That means there are three entries per row, and once you finish a row, you type \textbackslash \textbackslash{} to begin a new row.
 
 Let's reference this table!
 
@@ -931,7 +931,7 @@ $$(0.986 \: \mathrm{atm})(1 \: \mathrm{L}) = \left(0.0821 \: \frac{
 (293\mathrm{K})(n)$$
 $$n = 0.041 \: \mathrm{mol}$$ % OK WAIT THIS ACTUALLY WORKED!??!?!?! IM JUMPING FOR JOYYY
 
-Same exact equation, but a whole lot more work. You get the point: custom commands are readable, efficient, and save you from having to do all of that unnecessary work. This is where it really gets exciting, because you can create commands that are much more complicated than these examples. The sky's the limit! (Or maybe 12 seconds of compile time is the limit. Is that what it is on Overleaf?)
+Same exact equation, but a whole lot more work. You get the point: custom commands are readable, efficient, and save you from having to do all of that unnecessary work, especially when you're using the macro multiple times. This is where it really gets exciting, because you can create commands that are much more complicated than these examples. The sky's the limit! (Or maybe 12 seconds of compile time is the limit. Is that what it is on Overleaf?)
 
 \subsection{Embedding links}
 For this, we'll need the \texttt{hyperref} package. Embedding links is super simple, and it looks like this:
@@ -1170,7 +1170,7 @@ A popular pastebin is called \dots wait for it \dots wait for it \dots \href{htt
 \item Overfull hbox (badness 10000).
 \end{itemize}
 
-\item If it compiles, it works. No further questions.
+\item If it compiles, it works. No further questions.\footnote{Sadly, this is not true. You should take time to fix errors/warnings!}
 
 \item Try to avoid forcing things. The momentary relief may manifest itself into bigger problems.
 
