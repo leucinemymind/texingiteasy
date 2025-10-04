@@ -1069,84 +1069,11 @@ Last but certainly not least: \textbf{Don't send screenshot MREs!!!!} Always sen
 \subsection{Sharing and collaborating}
 \label{git}
 
+\subsubsection*{Overleaf}
+As of May 2025, Overleaf only allows one collaborator on the free plan. If you want to collaborate with more people, you'll need to upgrade to a paid plan. If you really need to collaborate with more than one person but don't want to pay for it, you can always download the project as a .zip file and send it to your collaborators. They can then upload it to their own Overleaf account and work on it there. When they're done editing, they can send it back to you, and you can upload it back to your Overleaf project. 
+
 \subsubsection*{Git, a version control system}
-There's a joke that says the creator of Git, Linus Torvalds, named it that because he doesn't understand semantics. While that's amusing, it couldn't be further from the truth. The versatility of ``git'' contributes to its charm. Let's attempt to git gud at Git!
-
-This \href{https://docs.github.com/en/get-started/learning-about-github/github-glossary}{glossary} helps you learn the vocabulary that comes with GitHub, an online platform that hosts Git repositories. But because this list is thorough, some terms are mixed in there that aren't necessarily super helpful for getting started with, so we'll just go over the basic terms.
-
-A \define{repository} holds your project with relevant files. There's your \define{remote repository} (hosted on the internet) and your \define{local repository} (inside your computer). 
-
-A \define{branch} is a contained version of your project where you can safely experiment without disturbing your main branch. Typically, when you work with others, you'll request to merge your branch into the main branch through a \define{pull request} on the web.
-
-The first thing you'll need to do is create a repository. You can choose whether to initiate the repository with a README that is used to describe the project. To work on your repository locally, clone it to your computer by typing this terminal\footnote{May differ with Windows.} command with its URL:
-
-\begin{verbatim}
-git clone <url>
-\end{verbatim}
-Let's go through an example workflow!\footnote{See a \href{https://www.atlassian.com/git/tutorials/comparing-workflows}{comparison of Git workflows} here.} Assume your directory is
-
-\begin{verbatim}
-/Users/SusieQ/Documents/finalproject/
-\end{verbatim}
-and you already have a remote (on GitHub or a similar platform) version synced to your local copy.
-
-Your terminal is ready to do some cool work. Start by changing the directory:
-
-\begin{verbatim}
-cd /Users/SusieQ/Documents/finalproject/
-\end{verbatim}
-then move onto a simple
-
-\begin{verbatim}
-git pull
-\end{verbatim}
-to make sure that the remote and local repositories are the same. If they are, your terminal should show
-
-\begin{verbatim}
-Already up to date.
-\end{verbatim}
-
-Amazing! Now let's get a separate branch. Type:
-
-\begin{verbatim}
-git checkout -b branch-name
-\end{verbatim}
-to make a new branch. This is where you'll be committing before you merge the branch with \texttt{main}\footnote{\texttt{main} used to be called \texttt{master} before they changed it.}.
-
-Set the upstream after you've created a new local branch. You only need to do this once, the first time you push a new branch that doesn't already exist on the remote. Running this command will track the local branch with the remote branch of the same name on \texttt{origin}, which is the default name of the remote repo. (Git prompts you to do this if you forget.)
-
-\begin{verbatim}
-git push --set-upstream origin branch-name
-\end{verbatim}
-After everything is set: stage, commit, push, merge! It doesn't rhyme. But say it a few times and it'll start sounding catchy. Or not. Use:
-
-\begin{verbatim}
-git add .
-\end{verbatim}
-to stage all of your changes. Commit the changes with a \textit{clear} message:
-
-\begin{verbatim}
-git commit -m "whatever you did, short and sweet"
-\end{verbatim}
-and push them:
-
-\begin{verbatim}
-git push origin branch-name
-\end{verbatim}
-
-When you've made all the edits you want on that branch, you'll be ready to merge them into your main branch. Type: 
-
-\begin{verbatim}
-git checkout main
-\end{verbatim}
-to switch to the main branch. Here's where you pray that you have no conflicts. Cross your fingers, knock on wood, do all the things. Conflicts happen when changes are ``competing'' with each other, such as when one person edits part of a file and another person makes different edits on the same part.
-
-For now, look on the bright side and assume there are no conflicts. You should be able to merge changes from \texttt{branch-name} with:
-
-\begin{verbatim}
-git merge branch-name
-\end{verbatim}
-and once you've done this, your \texttt{main} branch will be updated.\footnote{Run \texttt{git pull} before this when working with others.}
+There's a joke that says the creator of Git, Linus Torvalds, named it that because he doesn't understand semantics. While that's amusing, it couldn't be further from the truth. The versatility of ``git'' contributes to its charm. This \href{https://docs.github.com/en/get-started/learning-about-github/github-glossary}{glossary} helps you learn the vocabulary that comes with GitHub, an online platform that hosts Git repositories.
 
 \subsubsection*{Pastebins}
 Pastebins are a lot better for sharing smaller snippets of temporary code instead of big projects. You don't need software like Git to use a pastebin because they're generally web-based.
