@@ -23,4 +23,4 @@ Em
 All contributions and feedback are welcome and much appreciated. Please PR or submit an issue!
 
 ### 💐 Acknowledgments
-Thank you to Vinnie for teaching me LaTeX, Mrs. Mulgrew for supporting this project and arranging workshop dates, Dr. Reilly for discussing LaTeX with me and listening to my monologues about its beauty with infinite patience, Dr. Alameda for showing me some really cool stuff, Gretchen and Bryana for trusting me with their LaTeX introduction, and Sarah for being an awesome Girls Who Code co-head and TeXie. I couldn't have done this without you!
+Thank you to Vinnie for teaching me LaTeX, Mrs. Mulgrew for supporting this project and arranging workshop dates, Dr. Reilly for discussing LaTeX with me and listening to my monologues about its beauty with infinite patience, Bella for being my first reader, Dr. Alameda for showing me some really cool stuff, Gretchen and Bryana for trusting me with their LaTeX introduction, and Sarah for being an awesome Girls Who Code co-head and TeXie. I couldn't have done this without you!
