@@ -1,0 +1,85 @@
+%%% "TeXing it Easy" code %%%
+%%% Last modified: 16 May 2025 16:02%%%
+
+\documentclass[letterpaper, 12pt]{article}
+
+%%% packages
+\usepackage{graphicx} % Required for inserting images
+\usepackage{textcomp}
+\usepackage{tipa}
+\usepackage{physics}
+\usepackage{fullpage}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{float}
+\usepackage[headheight=15pt,headsep=0.3cm,top=2.5cm, margin=2.54cm]{geometry}
+\usepackage{minted}
+\usepackage[backend=biber,style=apa]{biblatex}
+\usepackage{lmodern}
+\addbibresource{ref.bib}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{gensymb}
+\usepackage{parskip}
+\usepackage[normalem]{ulem}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,        % Enable colored links
+    linkcolor=teal,         % Set color for internal links
+    citecolor=teal,         % Set color for citations
+    filecolor=teal,         % Set color for file links
+    urlcolor=teal           % Set color for URLs
+}
+
+%%% header
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear everything
+
+%%% new commands
+\newcommand{\define}[1]{\textcolor{blue}{\underline{#1}}} % define words
+\newcommand{\cmd}[1]{\texttt{\textbackslash #1}} %write command
+\newcommand{\emphasise}[1]{\textcolor{red}{\textbf{\textit{\underline{#1}}}}} % example new command
+\newcommand{\mathR}{\left(0.0821 \: \frac{\mathrm{L} \cdot \mathrm{atm}}{\mathrm{mol} \cdot \mathrm{K}}
+\right)} % more examples
+\newcommand{\textR}{\(\displaystyle 0.0821 \: \frac{\mathrm{L} \cdot \mathrm{atm}}{\mathrm{mol} \cdot \mathrm{K}} \)} % even more examples
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    {\Huge \bfseries \TeX ing it Easy 2\par}
+    \vspace{2cm}
+    {\Large Taking advantage of \LaTeX{} as a high school student \par}
+    \vfill
+    {\large May 2025\par}
+\end{titlepage}
+
+\tableofcontents
+
+\fancyhf{}
+\fancyhead[L]{\textsc{Contents}}
+\fancyfoot[C]{\thepage}
+
+\nocite{*}
+
+\newpage
+
+\section*{Preface}
+
+\fancyhf{}
+\fancyhead[L]{\textsc{Preface}}
+\fancyfoot[C]{\thepage}
+
+\addcontentsline{toc}{section}{Preface}
+
+Hi again!
+
+A lot has changed in a year, but not my love for beautiful documents. If that's true for you too, welcome back!
+
+\fancyhf{}
+\fancyhead[L]{\textsc{Citations}}
+\fancyfoot[C]{\thepage}
+
+\end{document}
